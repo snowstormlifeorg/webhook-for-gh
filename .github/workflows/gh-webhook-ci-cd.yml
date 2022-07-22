@@ -36,6 +36,7 @@ jobs:
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/repos
 
+        # upload web app artifacts
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -46,9 +47,8 @@ jobs:
         run: | 
           pwd
           ls -la
-          
-
-
+      
+        # upload ARM template artifacts 
       - name: Upload ARM template for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -69,7 +69,7 @@ jobs:
       - name: Download ARM templates from build job
         uses: actions/download-artifact@v2
         with:
-          name: infrastructrure 
+          name: infrastructure 
 
         # Log into Azure 
       - name: Login to Azure
@@ -79,7 +79,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
         # Deploy infrastructure 
-      - name: Deploy infrastructrure
+      - name: Deploy infrastructure
         id: deploy-infrastructure
         uses: azure/arm-deploy@v1
         with: 
