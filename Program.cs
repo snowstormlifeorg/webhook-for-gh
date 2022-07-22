@@ -9,7 +9,7 @@ app.MapPost("/event/{id}", async (http) =>
             var id = http.Request.RouteValues["id"];
             http.Response.StatusCode = 200;
             http.Response.ContentType = "text/plain";
-            http.Response.WriteAsync($"Event {id} has been received");
+            http.Response.WriteAsync($"Event {id} has been received. (Yay)");
         }); 
     });
 
