@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_webhook_for_gh_blizz_name": {
+            "value": "webhook-for-gh-blizz"
+        },
+        "serverfarms_webhook_for_gh_asp_name": {
+            "value": "webhook-for-gh-asp"
+        }
+    }
+}
