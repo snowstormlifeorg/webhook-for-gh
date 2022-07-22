@@ -42,11 +42,18 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/repos
 
+      - name: debugging
+        run: | 
+          pwd
+          ls -la
+          
+
+
       - name: Upload ARM template for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: infrastructure
-          path: ${{env.DOTNET_ROOT}}/infra
+          path: ./infra
           
 
   deploy:
