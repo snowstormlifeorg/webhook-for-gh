@@ -264,30 +264,6 @@
                 "siteName": "webhook-for-gh-blizz",
                 "hostNameType": "Verified"
             }
-        },
-        {
-            "type": "Microsoft.Web/sites/snapshots",
-            "apiVersion": "2015-08-01",
-            "name": "[concat(parameters('sites_webhook_for_gh_blizz_name'), '/2022-07-22T13_04_33_9949436')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_webhook_for_gh_blizz_name'))]"
-            ]
-        },
-        {
-            "type": "Microsoft.Web/sites/snapshots",
-            "apiVersion": "2015-08-01",
-            "name": "[concat(parameters('sites_webhook_for_gh_blizz_name'), '/2022-07-22T14_04_34_2577991')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_webhook_for_gh_blizz_name'))]"
-            ]
-        },
-        {
-            "type": "Microsoft.Web/sites/snapshots",
-            "apiVersion": "2015-08-01",
-            "name": "[concat(parameters('sites_webhook_for_gh_blizz_name'), '/2022-07-22T15_04_34_4957719')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_webhook_for_gh_blizz_name'))]"
-            ]
         }
     ]
 }
